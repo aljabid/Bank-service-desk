@@ -22,9 +22,15 @@ simulation of process improvements.
 ## Usage
 
 ```bash
-python main.py                                   # full demonstration
+python main.py                                   # full demonstration in the console
+python ui.py                                     # desktop window (Tkinter)
 python -m unittest discover -s tests -t . -v     # run the tests
 ```
+
+The desktop window has five tabs: **Services** (register, edit SLA targets),
+**Incidents** (register with SLA status, add a new incident), **SLA report**
+(compliance by service with a chart, violations, critical warning banner),
+**Statistics** and **Improvements** (run custom or preset scenarios).
 
 `main()` prints:
 
@@ -39,6 +45,7 @@ python -m unittest discover -s tests -t . -v     # run the tests
 
 ```
 main.py                     entry point, main() demonstration
+ui.py                       desktop UI (Tkinter)
 service_desk/
     models.py               Service and Incident (life cycle New -> Assigned -> Resolved -> Closed)
     desk.py                 ServiceDesk: service register and incident register
